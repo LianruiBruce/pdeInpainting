@@ -3,14 +3,8 @@
 """
 PDE Inpainting Baselines (Beginner-friendly)
 - OpenCV: TELEA / NAVIER
-- scikit-image (optional): BIHARMONIC
-- SciPy (optional): POISSON/LAPLACE inpainting (solve Δu = 0 in the hole)
-
-Install (at least):
-  pip install opencv-python
-Optional:
-  pip install scikit-image
-  pip install scipy
+- scikit-image: BIHARMONIC
+- SciPy: POISSON/LAPLACE inpainting (solve Δu = 0 in the hole)
 
 Usage 1 (single file):
   python pde_inpaint_baselines.py path/to/image.png path/to/mask.png out_dir
@@ -140,7 +134,7 @@ def inpaint_poisson(img_bgr_uint8, mask_bin_0_255):
 
 def inpaint_one_pair(image_path, mask_path, out_dir):
     """
-    Run TELEA / NAVIER / (optional) BIHARMONIC / (optional) POISSON for one image+mask.
+    Run TELEA / NAVIER / IHARMONIC / POISSON for one image+mask.
     """
     print("--------------------------------------------------")
     print(f"[信息] 处理图片: {image_path}")
