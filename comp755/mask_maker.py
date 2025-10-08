@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# pip install opencv-python
 import cv2, os
 import numpy as np
 
